@@ -23,6 +23,8 @@ var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             'ref':'PASS_THROUGH_PARAM',
             'user_ref': uuid
           });
+        var qd = {};
+        window.location = "olabot://token?token=test"
         console.log("Checkbox state: " + checkboxState);
       } else if (e.event == 'not_you') {
         console.log("User clicked 'not you'");
@@ -47,7 +49,7 @@ var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
 
 <body>
   <script>  
-document.write('<div class="fb-messenger-checkbox"    origin=https://etown.github.io  page_id=1206454586039393  messenger_app_id=158679724544082  user_ref='+uuid +'  prechecked="true"   allow_login="true"   size="large"></div>')   
+document.write('<div class="fb-messenger-checkbox"  style="display:none"  origin=https://etown.github.io  page_id=1206454586039393  messenger_app_id=158679724544082  user_ref='+uuid +'  prechecked="true"   allow_login="true"   size="large"></div>')   
 </script>
 </body>
 
