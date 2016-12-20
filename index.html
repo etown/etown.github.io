@@ -17,17 +17,17 @@ var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         console.log("Plugin was rendered");
       } else if (e.event == 'checkbox') {
         var checkboxState = e.state;
-        console.log("Checkbox state: " + checkboxState);
-      } else if (e.event == 'not_you') {
-        console.log("User clicked 'not you'");
-      } else if (e.event == 'hidden') {
-        console.log("Plugin was hidden");
         FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
             'app_id':'158679724544082',
             'page_id':'1206454586039393',
             'ref':'PASS_THROUGH_PARAM',
             'user_ref': uuid
           });
+        console.log("Checkbox state: " + checkboxState);
+      } else if (e.event == 'not_you') {
+        console.log("User clicked 'not you'");
+      } else if (e.event == 'hidden') {
+        console.log("Plugin was hidden");
       }
       
     });
