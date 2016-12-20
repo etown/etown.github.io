@@ -2,6 +2,7 @@
 <html>
 <head>
 <script>
+var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {var r = Math.random()*16|0,v=c=='x'?r:r&0x3|0x8;return v.toString(16);});
  window.fbAsyncInit = function() {
     FB.init({
       appId      : '158679724544082',
@@ -21,6 +22,12 @@
         console.log("User clicked 'not you'");
       } else if (e.event == 'hidden') {
         console.log("Plugin was hidden");
+        FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
+            'app_id':'158679724544082',
+            'page_id':'1206454586039393',
+            'ref':'PASS_THROUGH_PARAM',
+            'user_ref':uuid
+          });
       }
       
     });
@@ -44,7 +51,7 @@
   origin=https://etown.github.io
   page_id=1206454586039393
   messenger_app_id=158679724544082
-  user_ref="UNIQUE_REF_PARAM" 
+  user_ref=uuid 
   prechecked="true" 
   allow_login="true" 
   size="large"></div>   
