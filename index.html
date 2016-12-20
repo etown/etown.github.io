@@ -26,7 +26,7 @@ var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             'app_id':'158679724544082',
             'page_id':'1206454586039393',
             'ref':'PASS_THROUGH_PARAM',
-            'user_ref':uuid
+            'user_ref': uuid
           });
       }
       
@@ -46,15 +46,9 @@ var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
 </head>
 
 <body>
-      
-<div class="fb-messenger-checkbox"  
-  origin=https://etown.github.io
-  page_id=1206454586039393
-  messenger_app_id=158679724544082
-  user_ref=uuid 
-  prechecked="true" 
-  allow_login="true" 
-  size="large"></div>   
+  <script>  
+document.write('<div class="fb-messenger-checkbox"    origin=https://etown.github.io  page_id=1206454586039393  messenger_app_id=158679724544082  user_ref='+uuid +'  prechecked="true"   allow_login="true"   size="large"></div>')   
+</script>
 </body>
 
 </html>
